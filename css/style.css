@@ -1,0 +1,130 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	text-align: center;
+	background-image: url(../img/back.jpg);
+}
+
+#game{
+	position: relative;
+	width: 850px;
+	height: 850px;
+	border-radius: 10px;
+	margin: 10px auto;
+	-webkit-box-shadow: 8px 6px 5px rgba(50, 50, 50, 0.77);
+    -moz-box-shadow:    8px 6px 5px rgba(50, 50, 50, 0.77);
+	box-shadow:         8px 6px 5px rgba(50, 50, 50, 0.77);
+	background-color: rgba(0,0,0,0.5);
+	
+}
+
+#valor{
+	font-size: 32px;
+	color: rgb(229, 241, 120);
+	
+}
+
+#num{
+	font-size: 32px;
+	color: rgb(229, 241, 120);
+}
+
+#jogadas{
+	position: relative;
+	width: 150px;
+	height: 90px;
+	border-radius: 10px;
+	font-size: 10px;
+	top: -10px;
+	margin: 0 115%;
+	color: rgb(215, 213, 219);
+	-webkit-box-shadow: 8px 6px 5px rgba(50, 50, 50, 0.77);
+    -moz-box-shadow:    8px 6px 5px rgba(50, 50, 50, 0.77);
+	box-shadow:         8px 6px 5px rgba(50, 50, 50, 0.77);
+	background-color: rgba(8, 13, 85, 0.329);
+}
+
+#placar{
+	position: relative;
+	width: 150px;
+	height: 90px;
+	border-radius: 10px;
+	margin: -80px -35%;
+	color: rgb(215, 213, 219);
+	-webkit-box-shadow: 8px 6px 5px rgba(50, 50, 50, 0.77);
+    -moz-box-shadow:    8px 6px 5px rgba(50, 50, 50, 0.77);
+	box-shadow:         8px 6px 5px rgba(50, 50, 50, 0.77);
+	background-color: rgba(8, 13, 85, 0.329);
+}
+
+.card{
+	width: 200px;
+	height: 200px;
+	perspective: 600px;
+	position: absolute;
+	border-radius: 10px;
+}
+
+.face{
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: all 1s;
+	backface-visibility: hidden;
+}
+
+.front{
+	transform: rotateY(-180deg);
+}
+
+.flipped.front{
+	transform: rotateY(0deg);
+}
+
+.back{
+	background: url(../img/verso.jpg);
+	background-size: 200px 200px;
+}
+
+.flipped.back{
+	transform: rotateY(180deg);
+}
+
+.card:hover, .face.flipped{
+	box-shadow: 0 0 10px #aaa;
+}
+
+.face.flipped.match{
+	box-shadow: 0 0 10px #0f0;
+}
+
+#match{
+	position: relative;
+	margin: 0 auto;
+	top: 250px;
+	z-index: -1;
+	opacity: 1;
+	transition-property: top, opacity;
+	transition-duration: 1.5s;
+	visibility:hidden;
+}
+
+#gameOver{
+	position: absolute;
+	top: 0;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: -2;
+	visibility:hidden;
+	
+}
+
+#imgGameOver{
+	margin-top: 100px;
+}
